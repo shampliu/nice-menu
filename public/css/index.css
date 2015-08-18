@@ -9,26 +9,26 @@
 }
 /* line 7, ../scss/index.scss */
 #wrapper .toggled {
-  padding-left: 250px;
+  padding-left: 150px;
 }
 /* line 10, ../scss/index.scss */
 #wrapper .toggled #sidebar-wrapper {
-  width: 250px;
+  width: 150px;
 }
 /* line 14, ../scss/index.scss */
 #wrapper .toggled #page-content-wrapper {
   position: absolute;
-  margin-right: -250px;
+  margin-right: -150px;
 }
 
 /* line 22, ../scss/index.scss */
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
-  left: 250px;
+  left: 150px;
   width: 0;
   height: 100%;
-  margin-left: -250px;
+  margin-left: -150px;
   overflow-y: auto;
   background: #000;
   -webkit-transition: all 0.5s ease;
@@ -48,7 +48,7 @@
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 150px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -94,7 +94,7 @@
 @media (min-width: 768px) {
   /* line 88, ../scss/index.scss */
   #wrapper {
-    padding-left: 250px;
+    padding-left: 150px;
   }
 
   /* line 92, ../scss/index.scss */
@@ -104,7 +104,7 @@
 
   /* line 96, ../scss/index.scss */
   #sidebar-wrapper {
-    width: 250px;
+    width: 150px;
   }
 
   /* line 100, ../scss/index.scss */
