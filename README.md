@@ -1,10 +1,11 @@
 ## Nice Menu
 
 ### Setup
-1. Install dependencies & run
+1. Install dependencies & run (default port is 8081)
 
 ```javascript
 npm install
+export NODE_ENV=development
 node app.js
 ```
 
