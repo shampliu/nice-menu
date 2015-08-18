@@ -1,0 +1,14 @@
+{
+  "name": "NiceMenu",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "~1.5.2",
+    "compression": "^1.5.1",
+    "ejs": "^2.3.2",
+    "express": "~4.7.2",
+    "method-override": "~2.1.2",
+    "morgan": "~1.2.2"
+  }
+}
