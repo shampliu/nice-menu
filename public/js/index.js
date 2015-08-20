@@ -3,6 +3,9 @@ var main = angular.module('main', []);
 
 
 function mainCtrl($scope, $http) {
+
+	$scope.sortProp = 'title.$t';
+
 	var url = "https://spreadsheets.google.com/feeds/list/1n5OTsDtiKS39NUgeDtl_zCYn6YgYwoqT2tLbgwNhHWw/od6/public/values?alt=json";
 	$http.get(url).success(function(data){
 		console.log(data.feed.entry);
