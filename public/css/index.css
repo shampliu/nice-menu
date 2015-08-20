@@ -1,21 +1,32 @@
-/* line 4, ../scss/index.scss */
+/* line 3, ../scss/index.scss */
+.card .card-content p {
+  margin-bottom: 5px;
+}
+/* line 6, ../scss/index.scss */
+.card .card-content p .icon-wrapper {
+  text-align: center;
+  width: 30px;
+  display: inline-block;
+}
+
+/* line 14, ../scss/index.scss */
 #menu-toggle i:before {
   content: "\f054";
 }
 
-/* line 10, ../scss/index.scss */
+/* line 20, ../scss/index.scss */
 #menu-toggle .menu-arrow:before {
   content: "\f053";
 }
 
-/* line 15, ../scss/index.scss */
+/* line 25, ../scss/index.scss */
 .header {
   text-transform: uppercase;
   font-weight: 900;
   margin-top: 10px;
 }
 
-/* line 22, ../scss/index.scss */
+/* line 32, ../scss/index.scss */
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -24,21 +35,21 @@
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 26, ../scss/index.scss */
+/* line 36, ../scss/index.scss */
 #wrapper .toggled {
   padding-left: 250px;
 }
-/* line 29, ../scss/index.scss */
+/* line 39, ../scss/index.scss */
 #wrapper .toggled #sidebar-wrapper {
   width: 250px;
 }
-/* line 33, ../scss/index.scss */
+/* line 43, ../scss/index.scss */
 #wrapper .toggled #page-content-wrapper {
   position: absolute;
   margin-right: -250px;
 }
 
-/* line 41, ../scss/index.scss */
+/* line 51, ../scss/index.scss */
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
@@ -55,14 +66,14 @@
   transition: all 0.5s ease;
 }
 
-/* line 53, ../scss/index.scss */
+/* line 63, ../scss/index.scss */
 #page-content-wrapper {
   width: 100%;
   position: absolute;
   padding: 15px;
 }
 
-/* line 59, ../scss/index.scss */
+/* line 69, ../scss/index.scss */
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -71,72 +82,72 @@
   padding: 0;
   list-style: none;
 }
-/* line 67, ../scss/index.scss */
+/* line 77, ../scss/index.scss */
 .sidebar-nav li {
   text-indent: 20px;
   line-height: 40px;
 }
-/* line 70, ../scss/index.scss */
+/* line 80, ../scss/index.scss */
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
   color: #999999;
 }
-/* line 75, ../scss/index.scss */
+/* line 85, ../scss/index.scss */
 .sidebar-nav li a:hover {
   text-decoration: none;
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
 }
-/* line 81, ../scss/index.scss */
+/* line 91, ../scss/index.scss */
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
   text-decoration: none;
 }
 
-/* line 88, ../scss/index.scss */
+/* line 98, ../scss/index.scss */
 .sidebar-nav > .sidebar-brand {
   height: 65px;
   font-size: 18px;
   line-height: 60px;
 }
-/* line 93, ../scss/index.scss */
+/* line 103, ../scss/index.scss */
 .sidebar-nav > .sidebar-brand a {
   color: #999999;
 }
-/* line 95, ../scss/index.scss */
+/* line 105, ../scss/index.scss */
 .sidebar-nav > .sidebar-brand a:hover {
   color: #fff;
   background: none;
 }
 
 @media (min-width: 768px) {
-  /* line 104, ../scss/index.scss */
+  /* line 114, ../scss/index.scss */
   #wrapper {
     padding-left: 250px;
   }
 
-  /* line 108, ../scss/index.scss */
+  /* line 118, ../scss/index.scss */
   #wrapper.toggled {
     padding-left: 0;
   }
 
-  /* line 112, ../scss/index.scss */
+  /* line 122, ../scss/index.scss */
   #sidebar-wrapper {
     width: 250px;
   }
 
-  /* line 116, ../scss/index.scss */
+  /* line 126, ../scss/index.scss */
   #wrapper.toggled #sidebar-wrapper {
     width: 0;
   }
 
-  /* line 120, ../scss/index.scss */
+  /* line 130, ../scss/index.scss */
   #page-content-wrapper {
     padding: 20px;
     position: relative;
   }
 
-  /* line 125, ../scss/index.scss */
+  /* line 135, ../scss/index.scss */
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;

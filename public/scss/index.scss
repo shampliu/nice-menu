@@ -1,5 +1,15 @@
 @import "mixins";
 
+.card .card-content p {
+  margin-bottom: 5px;
+
+  .icon-wrapper {
+    text-align: center;
+    width: 30px;
+    display: inline-block;
+  }
+}
+
 #menu-toggle i {
   &:before {
     content:"\f054";
