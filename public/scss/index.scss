@@ -1,72 +1,75 @@
 @import "mixins";
 
+.header {
+  text-transform: uppercase;
+  font-weight: 900;
+
+}
+
 #wrapper {
-    padding-left: 0;
-    @include vendorize(transition, all 0.5s ease);
+  padding-left: 0;
+  @include vendorize(transition, all 0.5s ease);
 
-    .toggled {
-        padding-left: 150px;
+  .toggled {
+      padding-left: 150px;
 
-        #sidebar-wrapper {
-            width: 150px;
-        }
+      #sidebar-wrapper {
+          width: 150px;
+      }
 
-        #page-content-wrapper {
-            position: absolute;
-            margin-right: -150px;
-        }
-    }
+      #page-content-wrapper {
+          position: absolute;
+          margin-right: -150px;
+      }
+  }
 }
 
 
 #sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 150px;
-    width: 0;
-    height: 100%;
-    margin-left: -150px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+  z-index: 1000;
+  position: fixed;
+  left: 150px;
+  width: 0;
+  height: 100%;
+  margin-left: -150px;
+  overflow-y: auto;
+  background: #000;
+  @include vendorize(transition, all 0.5s ease);
 }
 
 #page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
+  width: 100%;
+  position: absolute;
+  padding: 15px;
 }
 
 .sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 150px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-    li {
-        text-indent: 20px;
-        line-height: 40px;
-        a {
-            display: block;
-            text-decoration: none;
-            color: #999999;
+  li {
+      text-indent: 20px;
+      line-height: 40px;
+      a {
+          display: block;
+          text-decoration: none;
+          color: #999999;
 
-            &:hover {
-                text-decoration: none;
-                color: #fff;
-                background: rgba(255,255,255,0.2);
-            }
+          &:hover {
+              text-decoration: none;
+              color: #fff;
+              background: rgba(255,255,255,0.2);
+          }
 
-            &:active, &:focus {
-                text-decoration: none;
-            }
-        }
-    }
+          &:active, &:focus {
+              text-decoration: none;
+          }
+      }
+  }
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -85,29 +88,29 @@
 
 
 @media(min-width:768px) {
-    #wrapper {
-        padding-left: 150px;
-    }
+  #wrapper {
+      padding-left: 150px;
+  }
 
-    #wrapper.toggled {
-        padding-left: 0;
-    }
+  #wrapper.toggled {
+      padding-left: 0;
+  }
 
-    #sidebar-wrapper {
-        width: 150px;
-    }
+  #sidebar-wrapper {
+      width: 150px;
+  }
 
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
+  #wrapper.toggled #sidebar-wrapper {
+      width: 0;
+  }
 
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
+  #page-content-wrapper {
+      padding: 20px;
+      position: relative;
+  }
 
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
+  #wrapper.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+  }
 }

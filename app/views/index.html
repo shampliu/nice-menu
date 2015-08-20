@@ -1,117 +1,98 @@
 <!doctype html>
 <html ng-app="main">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Nice Menu</title>
-    <link rel="shortcut icon" href="img/logo.png">
+  <title>Nice Menu</title>
+  <link rel="shortcut icon" href="img/logo.png">
+	
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/rotating-cards.css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <script src="js/index.js"></script>
+  <script src="js/index.js"></script>
 </head>
 <body ng-controller="mainCtrl">
 	<div id="wrapper">
-	    <div id="sidebar-wrapper">
-	        <ul class="sidebar-nav">
-	            <li class="sidebar-brand">
-	                <a href="#">
-	                    Filters
-	                </a>
-	            </li>
-	            <li>
-	                <a href="#">Price</a>
-	            </li>
-	            <li>
-	                <a href="#">A-Z</a>
-	            </li>
-	        </ul>
-	    </div>
-	    <!-- /#sidebar-wrapper -->
+		<div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+            Filters
+          </a>
+        </li>
+        <li>
+          <a href="#">Price</a>
+        </li>
+        <li>
+          <a href="#">A-Z</a>
+        </li>
+      </ul>
+    </div>
 
-	    <!-- Page Content -->
-	    <div id="page-content-wrapper">
-	        <div class="container-fluid">
-	            <div class="row">
-	                <div class="col-lg-12">
-	                    <h1>Restaurants</h1>
-	                    <p><a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> Results</p>
-	                    
-	                    <div class="col-md-4 col-sm-6">
-	                    	<div class="card-container manual-flip">
-                            <div class="card">
-                                <div class="front">
-                                    <div class="cover">
-                                        <img src="http://www.dakotafinancialnews.com/logos/nice-systems-logo.gif"/>
-                                    </div>
-                                    <div class="content">
-                                        <div class="main">
-                                            <h3 class="name">Restaurant</h3>
-                                            <p class="profession">Type</p>
-                                            <h5><i class="fa fa-map-marker fa-fw text-muted"></i> Location</h5>
-                                            <h5><i class="fa fa-building-o fa-fw text-muted"></i> Yelp Link? </h5>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                        </div>
-                                        <div class="footer">
-                                            <button class="btn btn-simple" onclick="rotateCard(this)">
-			                                    <i class="fa fa-mail-forward"></i> See Reviews
-			                                </button>
-                                        </div>
-                                    </div>
-                                </div> <!-- end front panel -->
-                                <div class="back">
-                                    <div class="content">
-                                        <div class="main">
-                                            <h4>Reviewer 1</h4>
-                                            <p>Review</p>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <button class="btn btn-simple" onclick="rotateCard(this)">
-		                                    <i class="fa fa-mail-forward"></i> Back
-		                                </button>
-                                    </div>
-                                </div> <!-- end back panel -->
-                            </div> <!-- end card -->
-                        </div> <!-- end card-container -->
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
+
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+    	<div class="container">
+	    	<div class="row">
+	    		<h1 class="header">Restaurants</h1>
+	    		<p><a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> Results</p>
+	    	</div>
+	    	<div class="row">
+	    		<div class="col s4" ng-repeat="place in places">
+						<div class="card">
+					    <div class="card-image waves-effect waves-block waves-light">
+					      <img class="activator" src="http://static1.squarespace.com/static/51ab58f4e4b0361e5f3ed294/51ab58f4e4b0361e5f3ed29a/51ab80bee4b0058e26cfcb1f/1370194240299/Benchmark_Restaurant_Dining_Room_Photographed_by_Evan_Sung.jpg">
+					    </div>
+					    <div class="card-content">
+					      <span class="card-title activator grey-text text-darken-4">{{ truncate(place.title.$t) }}<i class="material-icons right">more_vert</i></span>
+					      <p><a href="#">This is a link</a></p>
+					    </div>
+					    <div class="card-reveal">
+					      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+					      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+					    </div>
+					  </div>
+
+	    			
+	    			
+	    		</div>
+	    	</div>
 	    </div>
-	    <!-- /#page-content-wrapper -->
+                    
+                    
+          
+    </div>
+    <!-- /#page-content-wrapper -->
 
 	</div>
 	<!-- /#wrapper -->
 
 	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
 	<!-- Menu Toggle Script -->
 	<script>
 	$("#menu-toggle").click(function(e) {
-	    e.preventDefault();
-	    $("#wrapper").toggleClass("toggled");
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
 	});
 	
 	function rotateCard(btn){
-	    var $card = $(btn).closest('.card-container');
-	    console.log($card);
-	    if($card.hasClass('hover')){
-	        $card.removeClass('hover');
-	    } else {
-	        $card.addClass('hover');
-	    }
+    var $card = $(btn).closest('.card-container');
+    console.log($card);
+    if($card.hasClass('hover')){
+      $card.removeClass('hover');
+    } else {
+      $card.addClass('hover');
+    }
 	}
 	
 	

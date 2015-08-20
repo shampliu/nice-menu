@@ -1,4 +1,10 @@
 /* line 3, ../scss/index.scss */
+.header {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* line 9, ../scss/index.scss */
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -7,21 +13,21 @@
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 7, ../scss/index.scss */
+/* line 13, ../scss/index.scss */
 #wrapper .toggled {
   padding-left: 150px;
 }
-/* line 10, ../scss/index.scss */
+/* line 16, ../scss/index.scss */
 #wrapper .toggled #sidebar-wrapper {
   width: 150px;
 }
-/* line 14, ../scss/index.scss */
+/* line 20, ../scss/index.scss */
 #wrapper .toggled #page-content-wrapper {
   position: absolute;
   margin-right: -150px;
 }
 
-/* line 22, ../scss/index.scss */
+/* line 28, ../scss/index.scss */
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
@@ -33,18 +39,19 @@
   background: #000;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-/* line 37, ../scss/index.scss */
+/* line 40, ../scss/index.scss */
 #page-content-wrapper {
   width: 100%;
   position: absolute;
   padding: 15px;
 }
 
-/* line 43, ../scss/index.scss */
+/* line 46, ../scss/index.scss */
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -53,72 +60,72 @@
   padding: 0;
   list-style: none;
 }
-/* line 51, ../scss/index.scss */
+/* line 54, ../scss/index.scss */
 .sidebar-nav li {
   text-indent: 20px;
   line-height: 40px;
 }
-/* line 54, ../scss/index.scss */
+/* line 57, ../scss/index.scss */
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
   color: #999999;
 }
-/* line 59, ../scss/index.scss */
+/* line 62, ../scss/index.scss */
 .sidebar-nav li a:hover {
   text-decoration: none;
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
 }
-/* line 65, ../scss/index.scss */
+/* line 68, ../scss/index.scss */
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
   text-decoration: none;
 }
 
-/* line 72, ../scss/index.scss */
+/* line 75, ../scss/index.scss */
 .sidebar-nav > .sidebar-brand {
   height: 65px;
   font-size: 18px;
   line-height: 60px;
 }
-/* line 77, ../scss/index.scss */
+/* line 80, ../scss/index.scss */
 .sidebar-nav > .sidebar-brand a {
   color: #999999;
 }
-/* line 79, ../scss/index.scss */
+/* line 82, ../scss/index.scss */
 .sidebar-nav > .sidebar-brand a:hover {
   color: #fff;
   background: none;
 }
 
 @media (min-width: 768px) {
-  /* line 88, ../scss/index.scss */
+  /* line 91, ../scss/index.scss */
   #wrapper {
     padding-left: 150px;
   }
 
-  /* line 92, ../scss/index.scss */
+  /* line 95, ../scss/index.scss */
   #wrapper.toggled {
     padding-left: 0;
   }
 
-  /* line 96, ../scss/index.scss */
+  /* line 99, ../scss/index.scss */
   #sidebar-wrapper {
     width: 150px;
   }
 
-  /* line 100, ../scss/index.scss */
+  /* line 103, ../scss/index.scss */
   #wrapper.toggled #sidebar-wrapper {
     width: 0;
   }
 
-  /* line 104, ../scss/index.scss */
+  /* line 107, ../scss/index.scss */
   #page-content-wrapper {
     padding: 20px;
     position: relative;
   }
 
-  /* line 109, ../scss/index.scss */
+  /* line 112, ../scss/index.scss */
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
