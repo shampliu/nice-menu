@@ -99,7 +99,7 @@
 	    		
 	    	</div>
 	    	<div class="row">
-	    		<div class="col s6" ng-repeat="place in places | orderBy: sortProp">
+	    		<div class="col s6" ng-repeat="place in places | filter: query | orderBy: sortProp">
 						<div class="card">
 					    <div class="card-image waves-effect waves-block waves-light">
 					      <img class="activator" src="http://static1.squarespace.com/static/51ab58f4e4b0361e5f3ed294/51ab58f4e4b0361e5f3ed29a/51ab80bee4b0058e26cfcb1f/1370194240299/Benchmark_Restaurant_Dining_Room_Photographed_by_Evan_Sung.jpg">
@@ -114,7 +114,20 @@
 					    </div>
 					    <div class="card-reveal">
 					      <span class="card-title grey-text text-darken-4">Reviews<i class="material-icons right">close</i></span>
-					      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+					      <br>
+					      <p ng-show="place.gsx$aylan.$t"><b>AYLAN</b></p>
+					      {{ place.gsx$aylan.$t}}
+					      <p ng-show="place.gsx$chang.$t"><b>CHANG</b></p>
+					      {{ parseReview(place.gsx$chang.$t) }}
+					      <br>
+					      <span ng-repeat="star in parseRating(place.gsx$chang.$t)">
+					      	<img style="width: 25px; height: 25px;" src="img/chang.png" alt="">
+					      </span>
+					      <span ng-show="decimal(place.gsx$chang.$t)"><img style="width: 12.5px; height: 25px;" src="img/chang2.png" alt=""></span>
+					      <p ng-show="place.gsx$jackie.$t"><b>JACKIE</b></p>
+					      {{ place.gsx$jackie.$t }}
+					      <p ng-show="place.gsx$kristen.$t"><b>KRISTEN</b></p>
+					      <p ng-show="place.gsx$ruchir.$t"><b>RUCHIR</b></p>
 					    </div>
 					  </div>
 
